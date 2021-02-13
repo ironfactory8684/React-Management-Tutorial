@@ -17,6 +17,11 @@ const styles = theme => ({
   },
   table: {
     minWidth: 1080
+  },
+  canvas: {
+    width:500,
+    height:343,
+    background: 'blue'
   }
 })
 
@@ -48,8 +53,8 @@ class App extends Component {
   render() {
     const {classes} = this.props;
   return (
-    <Paper classNAme={classes.root}>
-      <Table classNAme={classes.table}>
+    <Paper className={classes.root}>
+      <Table className={classes.table}>
         <TableHead>
           <TableRow>
             <TableCell>id</TableCell>
@@ -66,6 +71,7 @@ class App extends Component {
             birthday={c.birthday} gender={c.gender} job={c.job}/>)})}
       </TableBody>    
       </Table>
+      <canvas id="myCanvas" class="canvas"></canvas>
     </Paper>
   );
 }
